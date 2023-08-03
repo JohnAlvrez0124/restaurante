@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistema de Cobros - Restaurante</title>
+  <link rel="stylesheet" href="animation.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sistema de Cobros - Restaurante</h1>
+
+    <div class="fondo-opciones">
+      <h2>Opciones de Fondo</h2>
+      <button id="fondoPredeterminado">Predeterminado</button>
+      <button id="fondo1">Fondo</button>
+      <button id="fondo2">Fondo 2</button>
+    </div>
+
+    <div class="buscador">
+      <label for="id">Buscar comida por ID:</label>
+      <input type="text" id="id" placeholder="Ingrese el ID de la comida">
+      <button id="buscar">Buscar</button>
+    </div>
+
+    <div class="menu">
+      <h2>Menú de Artículos</h2>
+      <ul id="menu">
+        <li data-id="1" data-nombre="Pica Pollo" data-precio="300" data-descripcion="Delicios pollo frito casero">Pica Pollo - RD$300</li>
+        <li data-id="2" data-nombre="La Bandera" data-precio="250" data-descripcion="Arros Habichuela y Carne La Bandera">La Bandera - RD$250</li>
+        <li data-id="3" data-nombre="Gaseosas" data-precio="45" data-descripcion="Resfrescos y Gaseosas">Gaseosas - RD$45</li>
+        <li data-id="4" data-nombre="Pollo Gizado" data-precio="270" data-descripcion="mulos y Pechugas Guisadas">Pollo Gizado - RD$270</li>
+        <li data-id="5" data-nombre="Helado" data-precio="40" data-descripcion="Helado de coco">Helado - RD$140</li>
+        <li data-id="6" data-nombre="Pezcado con tostones" data-precio="400" data-descripcion="fritos">Pezcado con tostones - RD400</li>
+        <!-- Agrega más elementos al menú según sea necesario -->
+      </ul>
+    </div>
+
+    <div class="cobro">
+      <h2>Resumen del Pedido</h2>
+      <ul id="pedido">
+        <!-- Elementos agregados dinámicamente con JavaScript -->
+      </ul>
+      <p id="total">Total: $0</p>
+      <input type="text" id="nombreCliente" placeholder="Nombre del cliente">
+      <button id="pagar">Pagar</button>
+    </div>
+
+    <div id="mensaje" class="mensaje"></div>
+
+    <div class="cliente-info">
+      <h2>Información del Cliente</h2>
+      <div class="busqueda-cliente">
+        <label for="buscarCliente">Buscar cliente por ID:</label>
+        <input type="text" id="buscarCliente" placeholder="Ingrese el ID del cliente">
+        <button id="buscarInfoCliente">Buscar</button>
+      </div>
+      <table id="tablaCliente">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Visitas</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>3</td>
+        </tr>
+        <!-- Agrega más filas según sea necesario -->
+      </table>
+    </div>
+
+    <div class="empleado-info">
+      <h2>Información del Empleado</h2>
+      <p id="nombreEmpleado"></p>
+    </div>
+
+    <div class="fecha-hora">
+      <p id="fechaHora"></p>
+    </div>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
+

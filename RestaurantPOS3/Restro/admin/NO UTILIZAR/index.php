@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- HEADER -->
+   <header class="header">
+    <nav class="navbar">
+        <a href="cliente.html">Inicio</a>
+        <a href="#">Nosotros</a>
+          <a href="menurestaurant.html">Menu</a>
+          <a href="indexcliente.php">Login</a>
+          <a href="coctato.html">Contactanos</a>
+          <a href="indexx.php">configuraciones</a>
+    </nav>
+    <form action="" class="search-bar">
+       <input type="text"  placeholder="Buscar...">
+       <button><i class='bx bx-search'></i></button>
+    </form>
+   </header>
+  
+</body>
+<head>
+  <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: #000;
+  
+}
+.background{
+    background: url(5.jpg) no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 13%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.navbar a{
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    margin-right: 30px;
+    text-decoration: none;
+}
+.navbar a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    bottom: -5px;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s ease;
+}
+.navbar a:hover:after{
+    transform: translateY(0);
+    opacity: 1;
+}
+.search-bar{
+    width: 250px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+.search-bar input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.search-bar button{
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.search-bar input::placeholder{
+    color: #fff;
+}
+.search-bar button i{
+    font-size: 22px;
+}
+  </style>
+<head>
+  <style>
+      body {
+          margin: 0;
+      }
+      .slider {
+          position: relative;
+          overflow: hidden;
+          width: 99vw;
+          height: 100vh;
+      }
+      .slider__slides {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+      }
+      .slider__slide {
+          flex: 0 0 100%;
+          height: 100%;
+      }
+      .slider__slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      .slider__controls {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          display: flex;
+          justify-content: space-between;
+      }
+      .slider__control {
+          cursor: pointer;
+          font-size: 24px;
+          color: white;
+          text-shadow: 1px 1px 1px black;
+      }
+  </style>
+</head>
+<body>
+  <div class="slider">
+      <div class="slider__slides">
+          <div class="slider__slide"><img src="arroz con carne de res.jpg"></div>
+          <div class="slider__slide"><img src="comida.jpg"></div>
+          <div class="slider__slide"><img src="platillos.jpg"></div>
+          <div class="slider__slide"><img src="pure de huevo .jpg"></div>
+          <div class="slider__slide"><img src="doble platillo.jpg"></div>
+      </div>
+      <div class="slider__controls">
+          <div class="slider__control slider__control--prev"><img src="icon12.png"></div>
+          <div class="slider__control slider__control--next"><img src="icon(11).png"></div>
+          
+      </div>
+  </div>
+
+  <script>
+      const slider = document.querySelector('.slider');
+      const slides = slider.querySelector('.slider__slides');
+      const prevControl = slider.querySelector('.slider__control--prev');
+      const nextControl = slider.querySelector('.slider__control--next');
+
+      let currentSlide = 0;
+
+      prevControl.addEventListener('click', () => {
+          currentSlide--;
+          if (currentSlide < 0) currentSlide = 5;
+          updateSlider();
+      });
+
+      nextControl.addEventListener('click', () => {
+          currentSlide++;
+          if (currentSlide > 3) currentSlide = 0;
+          updateSlider();
+      });
+
+      function updateSlider() {
+          slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+  </script>
+
+</body>
+<head>
+  <title>consuelo</title>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="ventana des.css">
+</head>
+<body>
+  <div class="container">
+      <h3 class="title"> Nuevos Productos </h3>
+      <div class="products-container">
+          <div class="product" data-name="p-1">
+              <img src="limo.jpeg" alt="limon">
+              <h3>Jugo de limon Sabroso, Resfrescante Delicioso </h3>
+              <div class="price">RD$60.00</div>
+          </div>
+          <div class="product" data-name="p-2">
+              <img src="pica-pollo-con-papa-frita.jpg" alt="consuelo">
+              <h3>Pechurina con papa o tostones de 5 pieza</h3>
+              <div class="price">RD$275.00</div>
+          </div>
+      </div>
+  </div>
+  <div class="products-preview">
+
+      <div class="preview" data-target="p-1">
+          <i class="fas fa-times"></i>
+          <img src="cri.png" alt="">
+          <h3>Zapatilla FILA Premium - Blanco</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+          </div>
+          <p>Nuestra gama de zapatillas está diseñada para ofrecer estilo, 
+              confort y durabilidad.</p>
+          <div class="price">$129.90</div>
+          <div class="buttons">
+              <a href="#" class="buy">buy now</a>
+              <a href="#" class="cart">add to cart</a>
+          </div>
+      </div>
+      <div class="preview" data-target="p-2">
+          <i class="fas fa-times"></i>
+          <img src="arro.jpeg" alt="">
+          <h3>Zapatilla FILA Premium - Rosa</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+          </div>
+          <p>Nuestra gama de zapatillas está diseñada para ofrecer estilo,
+              confort y durabilidad.</p>
+          <div class="price">$135.90</div>
+          <div class="buttons">
+              <a href="#" class="buy">Comprar Ahora</a>
+              <a href="#" class="cart">Añadir al Carrito</a>
+          </div>
+      </div>
+  </div>
+  <script src="js/main.js"></script>
+
+ 
+</html>
+
+
+
+

@@ -1,0 +1,172 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('repetir.jpg');
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: linear-gradient(135deg, #fafafa 10%, #c4c9ca 100%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.fondo-opciones {
+  margin-bottom: 20px;
+}
+
+.fondo-opciones h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.fondo-opciones button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.buscador {
+  margin-bottom: 20px;
+}
+
+.buscador label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.buscador input[type="text"],
+.buscador button {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.menu,
+.cobro,
+.cliente-info,
+.empleado-info,
+.fecha-hora {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu h2,
+.cobro h2,
+.cliente-info h2,
+.empleado-info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.menu ul,
+.cobro ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li,
+.cobro li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu li:hover,
+.cobro li:hover {
+  background-color: #e0e0e0;
+}
+
+.cobro p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cobro input[type="text"],
+.cobro button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.cobro button {
+  margin-top: 10px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.cobro button:hover {
+  background-color: #0c87e8;
+}
+
+.mensaje {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cliente-info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cliente-info th,
+.cliente-info td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.buscador-cliente {
+  margin-bottom: 10px;
+}
+
+.buscador-cliente label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.buscador-cliente input[type="text"],
+.buscador-cliente button {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.empleado-info p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.fecha-hora {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+
+
+
+
+
+
+
+

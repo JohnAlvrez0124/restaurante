@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabla de Reservaciones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+    
+    input[type="text"] {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tabla de Reservaciones</h1>
+  
+  <input type="text" id="searchInput" placeholder="Buscar por ID">
+  
+  <table id="reservationsTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Fecha de Reservación</th>
+        <th>Cantidad de Personas</th>
+        <th>Hora de Reservación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Cristiano</td>
+        <td>Ronaldo</td>
+        <td>Ronaldo@example.com</td>
+        <td>123456789</td>
+        <td>2023-07-05</td>
+        <td>4</td>
+        <td>18:00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Neymar </td>
+        <td>junior</td>
+        <td>junior@example.com</td>
+        <td>987651223</td>
+        <td>2023-07-06</td>
+        <td>6</td>
+        <td>20:30</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Leonel </td>
+        <td>Messi</td>
+        <td>Messi@example.com</td>
+        <td>9876545342</td>
+        <td>2023-07-06</td>
+        <td>5</td>
+        <td>21:30</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Vinícius</td>
+        <td>Júnior</td>
+        <td>ViníciusJúnior@example.com</td>
+        <td>1233345698</td>
+        <td>2023-07-07</td>
+        <td>2</td>
+        <td>20:00</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Kylian </td>
+        <td>Mbappé</td>
+        <td>Mbappé@example.com</td>
+        <td>8889995632</td>
+        <td>2023-07-07</td>
+        <td>2</td>
+        <td>20:30</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Robert</td>
+        <td>Lewandowski</td>
+        <td>RobertLewandowski@example.com</td>
+        <td>987654321</td>
+        <td>2023-07-08</td>
+        <td>4</td>
+        <td>19:30</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Roberto </td>
+        <td>Carlos</td>
+        <td>Carlos@example.com</td>
+        <td>242453569</td>
+        <td>2023-07-08</td>
+        <td>3</td>
+        <td>18:30</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Mohamed </td>
+        <td>Salah</td>
+        <td>Salah@example.com</td>
+        <td>987654321</td>
+        <td>2023-07-09</td>
+        <td>6</td>
+        <td>19:00</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Erling </td>
+        <td>Haaland</td>
+        <td>Haaland@example.com</td>
+        <td>234567891</td>
+        <td>2023-07-09</td>
+        <td>1</td>
+        <td>21:30</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Karim </td>
+        <td>Benzema</td>
+        <td>Benzema@example.com</td>
+        <td>1234567897</td>
+        <td>2023-07-10</td>
+        <td>3</td>
+        <td>22:00</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const reservationsTable = document.getElementById("reservationsTable");
+    
+    searchInput.addEventListener("keyup", function() {
+      const searchValue = searchInput.value.toLowerCase();
+      const rows = reservationsTable.getElementsByTagName("tr");
+      
+      for (let i = 1; i < rows.length; i++) {
+        const row = rows[i];
+        const idCell = row.cells[0];
+        const idValue = idCell.textContent.toLowerCase();
+        
+        if (idValue.indexOf(searchValue) > -1) {
+          row.style.display = "";
+        } else {
+          row.style.display = "none";
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+

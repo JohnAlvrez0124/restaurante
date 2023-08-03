@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Imagen de Fondo y Centralizada con Zoom</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('fondo2.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    
+    .centralized-image {
+      max-width: 900px;
+      max-height: 10000px;
+      cursor: zoom-in;
+      transition: transform 0.3s;
+    }
+    
+    .centralized-image:hover {
+      transform: scale(1.4);
+    }
+  </style>
+</head>
+<body>
+  <img src="picapollo.jpg" alt="Imagen Centralizada" class="centralized-image">
+</body>
+</html>
+
+
+
+
